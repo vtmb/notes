@@ -1,0 +1,7 @@
+env prints the environmentvariables
+
+$PATH contains all directories with executables seperated by :
+
+source ~/.bash_profile reloads the bash_profile
+
+export VARIABLE = VALUE makes $VARIABLE accessible in env
