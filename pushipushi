@@ -1,0 +1,27 @@
+Kurzanleitung:
+
+im AppleDeveloper Center auf Identifiers->AppIDs gehen und beim zu erneuernden Zertifikat auf Edit klicken. Dann auf create new Certificate klicken. Es kommt ein Hinweis, dass ein CertSignRequest benötigt wird, inkl. Anleitung. Diese Anleitung befolgen und den Request speichern.
+
+(Hier Kurz: KeyChainApp->Schlüsselbundverwaltung->Zertifikatsassistent->Zertifikat einer Zertifizierungsinstanz anfordern)
+
+Wenn man es sich leicht machen will, macht man pro app einen Ordner und speichert alle pems, p12, certs etc darin.
+
+mit dem Request kann man nun ein neues Zertifikat erstellen. im KeyChainAccess kann man dies nun sehen. Lässt man die Zertifikate nach Ablaufdatum sortieren, sollte das gerade angelegte Zertifikat ziemlich weit oben sein.
+
+nun muss man Zertifikat und Schlüssel exportieren (rechtsklick->export).
+den Schlüssel nennen wir apsKey.p12, das Zertifikat apsCert.p12
+
+nun werden aus .p12 .pem generiert, je aus Schlüssel und Zertifikat.
+
+openssl pkcs12 -clcerts -nokeys -out apsCert.pem -in apsCert.p12
+openssl pkcs12 -nocerts -out apsKey.pem -in apsKey.p12
+
+Passwort entfernen:
+
+openssl rsa -in apsKey.pem -out apsKeyOhnePW.pem
+
+Dateien zusammenfassen:
+
+cat apsCert.pem apsKeyNOPW.pem > apsDevBundle.pem
+
+die apsDevBundle.pem ist nun das, was der PushServer braucht.
