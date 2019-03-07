@@ -1,20 +1,20 @@
-## Using Environments in Python3
+# Using Environments in Python3
 
 venv is shorthand for virtual environment
 
-# Creating a environment inside a folder:
+## Creating a environment inside a folder:
 
 ```bash
 python3 -m venv venv
 ```
 
-# Using a present environment inside a folder:
+## Using a present environment inside a folder:
 
 ```bash
 source venv/bin/activate
 ```
 
-# Leaving a venv
+## Leaving an environment
 
 ```bash
 deactivate
