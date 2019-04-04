@@ -22,7 +22,7 @@
 
 ```bash
 /etc
-``
+``` 
 
 ## Homedirectory from Users
 
@@ -34,7 +34,7 @@
 
 ```bash
 /lost+found
-``
+```
 
 ## Mountpoint for cd, usb, ...
 
