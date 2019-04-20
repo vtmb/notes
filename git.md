@@ -18,7 +18,7 @@ cd /path/to/project
 git init
 git remote add origin git@mydomain.de:/home/git/neuesprojekt.git
 git remote set-url origin git@mydomain.de:/home/git/neuesprojekt.git
-git push -u
+git push -u origin master
 git push --set-upstream origin master
 ```
 
