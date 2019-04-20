@@ -6,6 +6,7 @@ auf dem server:
 
 ```bash
 cd /home/git
+su git
 mkdir neuesprojekt.git
 cd neuesprojekt.git
 git init --bare --shared=group
