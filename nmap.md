@@ -1,6 +1,8 @@
 Scanning and documenting
 
 ```bash
-nmap -O 192.168.1.0/24 | tee nmap-test.txt
+sudo nmap -O 192.168.29.166/16 | tee nmap-test.txt
 ```
 
+192.168.29.166/16 scans 192.168.x.x
+192.168.29.166/24 scans 192.168.29.x
