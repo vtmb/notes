@@ -1,4 +1,4 @@
-    ```swift
+```swift
     /// Prüft, ob es ein Bild mit bestimmten Dateinamen gibt und liefert es ggf zurück
     ///
     /// - Parameter name: Dateiname
@@ -9,8 +9,9 @@
         let filePath = url.appendingPathComponent(name).path
         return UIImage.init(contentsOfFile: filePath)
     }
-    
-    
+```
+
+```swift
     /// Speichert ein Bild unter einem beliebigen Namen ab. Die Completion teilt mit, ob das Bild gespeichert werden konnte oder auch nicht.
     ///
     /// - Parameters:
@@ -33,7 +34,7 @@
             completion(false)
         }
     }
-    ```
+```
 
 ```swift
     private func addTapRecognizer(toView view: UIView) {
