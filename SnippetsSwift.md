@@ -1,3 +1,5 @@
+# Bilder abrufen
+
 ```swift
     /// Prüft, ob es ein Bild mit bestimmten Dateinamen gibt und liefert es ggf zurück
     ///
@@ -10,6 +12,8 @@
         return UIImage.init(contentsOfFile: filePath)
     }
 ```
+
+# Bilder abspeichern
 
 ```swift
     /// Speichert ein Bild unter einem beliebigen Namen ab. Die Completion teilt mit, ob das Bild gespeichert werden konnte oder auch nicht.
@@ -35,6 +39,8 @@
         }
     }
 ```
+
+# Tapgesture Recognizer
 
 ```swift
     private func addTapRecognizer(toView view: UIView) {
