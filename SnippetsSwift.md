@@ -34,3 +34,24 @@
         }
     }
     ```
+
+```swift
+    private func addTapRecognizer(toView view: UIView) {
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(didTapButton(sender:)))
+        view.isUserInteractionEnabled = true
+        view.addGestureRecognizer(recognizer)
+    }
+    
+    @objc private func didTapButton(sender: UIGestureRecognizer) {
+        guard let view = sender.view else {
+            return
+        }
+        
+        switch view {
+        case self.imageView:
+        default:
+            print(sender.debugDescription)
+        }
+     }
+
+``
