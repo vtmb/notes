@@ -1,4 +1,4 @@
 # Benutzerkonten administrieren
 
-bash´´´
+bash```
 netplwiz
