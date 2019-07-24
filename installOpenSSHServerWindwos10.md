@@ -11,7 +11,7 @@ Add-WindowsCapability -Online
 
 # aktivieren
 
-bash```
+```bash
 Set-Service sshd -StartupType Automatic
 Set-Service ssh-agent -StartupType Automatic
 ```
