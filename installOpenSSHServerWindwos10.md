@@ -9,9 +9,16 @@ Get-WindowsCapability -Online | ? name -like *OpenSSH.Server* |
 Add-WindowsCapability -Online
 ```
 
-# aktivieren
+# aktivieren (benötigt Neustart)
 
 ```bash
 Set-Service sshd -StartupType Automatic
 Set-Service ssh-agent -StartupType Automatic
+```
+
+# starten (setzt keinen Autostart)
+
+```bash
+Start-Service sshd
+Start-Service ssh-agent
 ```
