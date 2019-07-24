@@ -2,23 +2,28 @@
 
 https://www.windowspro.de/wolfgang-sommergut/openssh-windows-server-2019-installieren
 
-# installieren
+## installieren
 
 ```bash
 Get-WindowsCapability -Online | ? name -like *OpenSSH.Server* |
 Add-WindowsCapability -Online
 ```
 
-# aktivieren (benötigt Neustart)
+## aktivieren (benötigt Neustart)
 
 ```bash
 Set-Service sshd -StartupType Automatic
 Set-Service ssh-agent -StartupType Automatic
 ```
 
-# starten (setzt keinen Autostart)
+## starten (setzt keinen Autostart)
 
 ```bash
 Start-Service sshd
 Start-Service ssh-agent
 ```
+
+## powershell verwenden
+
+```powershell
+powershell.exe
