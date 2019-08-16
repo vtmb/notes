@@ -26,3 +26,16 @@ git push -u origin master
 git push --set-upstream origin master
 ```
 
+# Keys einrichten
+
+im Heimatverzeichnis des git-users kann man die public keys derjenigen hinterlegen, die am Projekt mitarbeiten wollen
+
+```bash
+~/.ssh/authorized_keys
+```
+
+diese können einfach angehängt werden
+
+```bash
+cat /tmp/id_rsa.coworker.pub >> ~/.ssh/authorized_keys
+```
