@@ -19,3 +19,11 @@ mysql -u username -p database_name < file.sql
 ```SQL
 mysqldump db_name > backup-file.sql
 ```
+
+# alter table: make id primary key and being auto_increment
+
+tested on empty tables
+
+```SQL
+alter table Licenses change column id id int(10) unsigned not null auto_increment primary key;
+```
