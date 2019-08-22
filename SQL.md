@@ -27,3 +27,9 @@ tested on empty tables
 ```SQL
 alter table Licenses change column id id int(10) unsigned not null auto_increment primary key;
 ```
+
+# trim
+
+```SQL
+update tablename set column = LTRIM(RTRIM(column));
+```
