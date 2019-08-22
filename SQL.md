@@ -33,3 +33,10 @@ alter table Licenses change column id id int(10) unsigned not null auto_incremen
 ```SQL
 update tablename set column = LTRIM(RTRIM(column));
 ```
+
+# rename column
+
+```SQL
+ALTER TABLE table_name
+CHANGE COLUMN old_column_name new_column_name data_type;
+```
