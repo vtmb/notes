@@ -17,3 +17,9 @@ find . -name "MyRegexPattern*.txt" > pathsToFile
 ```bash
 for word in $(cat fileContainingOnePathPerLine); do awk -f myAwkScript.awk $word; done > desiredOutput
 ```
+
+# removing lines containing Pattern
+
+```bash
+sed -i.bak '/Pattern/d' fileToClean.csv
+```
