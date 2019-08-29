@@ -1,3 +1,8 @@
+# hint!
+
+If the files were created on non-Unix machines the line endings will break your neck!
+change them from CR to LF or the output will be cluttered junk! 
+
 # run awk script on one file
 
 ```bash
