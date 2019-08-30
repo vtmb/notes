@@ -40,3 +40,12 @@ update tablename set column = LTRIM(RTRIM(column));
 ALTER TABLE table_name
 CHANGE COLUMN old_column_name new_column_name data_type;
 ```
+
+# export as CSV
+
+```SQL
+SELECT customer_id, firstname, surname INTO OUTFILE '/exportdata/customers.txt'
+  FIELDS TERMINATED BY ',' OPTIONALLY ENCLOSED BY '"'
+  LINES TERMINATED BY '\n'
+  FROM customers order by firstname;
+```
