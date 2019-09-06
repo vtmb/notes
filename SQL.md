@@ -49,3 +49,5 @@ SELECT customer_id, firstname, surname INTO OUTFILE '/exportdata/customers.txt'
   LINES TERMINATED BY '\n'
   FROM customers order by firstname;
 ```
+
+exports are by default written to /var/lib/mysql/$NAMEOFDATABASE
