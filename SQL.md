@@ -48,6 +48,12 @@ ALTER TABLE tablename
 ADD COLUMN phone VARCHAR(15) AFTER someColumn;
 ```
 
+# update value from another table (helps fixing id/value)
+
+```SQL
+update Licenses set computerID = (select Computers.id from Computers where Computers.hostname = Licenses.hostname);
+```
+
 # export as CSV
 
 ```SQL
