@@ -1,7 +1,9 @@
 # load csv into database
 
 ```SQL
-load data local infile 'file.csv' into table tablename fields terminated by ',' lines terminated by '\n' (column, column);
+load data local infile 'file.csv' into table tablename
+  fields terminated by ',' 
+  lines terminated by '\n' (column, column);
 ```
 
 # using varchar with utf8mb4
@@ -25,13 +27,15 @@ mysqldump db_name > backup-file.sql
 tested on empty tables
 
 ```SQL
-alter table Licenses change column id id int(10) unsigned not null auto_increment primary key;
+alter table Licenses
+  change column id id int(10) unsigned not null auto_increment primary key;
 ```
 
 # trim
 
 ```SQL
-update tablename set column = LTRIM(RTRIM(column));
+update tablename 
+  set column = LTRIM(RTRIM(column));
 ```
 
 # rename column
@@ -51,7 +55,8 @@ ADD COLUMN phone VARCHAR(15) AFTER someColumn;
 # update value from another table (helps fixing id/value)
 
 ```SQL
-update Licenses set computerID = (select Computers.id from Computers where Computers.hostname = Licenses.hostname);
+update Licenses 
+  set computerID = (select Computers.id from Computers where Computers.hostname = Licenses.hostname);
 ```
 
 # export as CSV
