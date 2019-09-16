@@ -41,6 +41,13 @@ ALTER TABLE table_name
 CHANGE COLUMN old_column_name new_column_name data_type;
 ```
 
+# add column
+
+```SQL
+ALTER TABLE tablename
+ADD COLUMN phone VARCHAR(15) AFTER someColumn;
+```
+
 # export as CSV
 
 ```SQL
