@@ -12,3 +12,6 @@ das teilt einem mit, welcher teil welche Version ist, in meinem Fall ist "Window
 
 dism /export-image /sourceimagefile:install.esd /sourceindex:5 /destinationimagefile:install.wim /compress:max /checkintegrity
 
+# antwortdateien erstellen
+
+wsim ist in der 64bit version nicht funktionstüchtig gewesen, allerdings konnte ich mit der 32bit version einen antwortkatalog erstellen.
