@@ -4,6 +4,13 @@
 CREATE DATABASE databasename DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 ```
 
+# allow remote hosts
+
+```bash
+/etc/mysql/mariadb.conf.d/50-server.cnf
+```
+set bind-adress from localhost to 0.0.0.0
+
 # load csv into database
 
 ```SQL
