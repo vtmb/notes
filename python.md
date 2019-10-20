@@ -1,12 +1,12 @@
 # virtuelle Umgebung erzeugen
 
-bash```
+```bash
 pipenv install <paket>
-bash```
+```
 
 # virtuelle Umgebung benutzen
 
-bash```
+```bash
 pipenv shell
 ```
 
