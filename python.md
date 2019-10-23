@@ -1,3 +1,10 @@
+# pipenv installieren
+
+```bash
+apt-get install python3-pip
+pip install pipenv
+```
+
 # virtuelle Umgebung erzeugen
 
 ```bash
