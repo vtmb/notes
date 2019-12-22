@@ -70,6 +70,11 @@ ADD COLUMN phone VARCHAR(15) AFTER someColumn;
 alter table TABLENAME modify COLUMNNAME COLUMNTYPE first;
 ```
 
+# change type of column
+```SQL
+alter table TABLENAME change COLUMNNAME COLUMNNAME NEWTYPE;
+```
+
 # update value from another table (helps fixing id/value)
 
 ```SQL
