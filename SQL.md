@@ -67,7 +67,7 @@ ADD COLUMN phone VARCHAR(15) AFTER someColumn;
 
 # make a cloumn being the first
 ```SQL
-alter table `TABLENAME` modify `COLUMNNAME` `COLUMNTYPE first;
+alter table TABLENAME modify COLUMNNAME COLUMNTYPE first;
 ```
 
 # update value from another table (helps fixing id/value)
