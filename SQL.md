@@ -92,3 +92,11 @@ SELECT customer_id, firstname, surname INTO OUTFILE '/exportdata/customers.txt'
 ```
 
 exports are by default written to /var/lib/mysql/$NAMEOFDATABASE
+
+
+# creating user and granting access
+
+```SQL
+create user 'USERNAME'@'%' identified by PASSWORD;
+grant all privileges on DATABASENAME.TABLENAME to 'USERNAME'@'%';
+```
