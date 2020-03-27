@@ -1,27 +1,24 @@
-# set domain/subdomain
+# install nginx on Ubuntu 18.04
 
-how to set domains? subdomains?
+use packages from nginx - add the signing key
 
 ```bash
-	server {
-                listen 80;
-                server_name www.domain.de;
-                root /srv/data;
+wget -O - http://nginx.org/keys/nginx_signing.key | apt-key add -
+```
 
-                location / {
-                        index index.html index.htm;
-                }
-        }
+add package repository to `/etc/apt/sources.list.d/nginx.list`
 
-        server {
-                listen 80;
-                server_name subdomain.domain.de;
-                root /srv/subdomains/about;
+```bash
+# Nginx (Mainline)
+deb [arch=amd64] http://nginx.org/packages/mainline/ubuntu/ bionic nginx
+deb-src [arch=amd64] http://nginx.org/packages/mainline/ubuntu/ bionic nginx
+```
 
-                location / {
-                        index index.html index.htm;
-                }
-        }
+install nginx 
+
+```bash
+apt-get update
+apt-get install nginx
 ```
 
 # where are my acceslogs?
