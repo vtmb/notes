@@ -1,0 +1,32 @@
+# install maria db on ubuntu 18.04
+
+add keyfile 
+
+```bash
+apt-key adv --recv-keys --keyserver hkp://keyserver.ubuntu.com:80 0xF1656F24C74CD1D8
+```
+
+create repo file `/etc/apt/sources.list.d/MariaDB.list`
+
+content:
+
+```bash
+# MariaDB 10.3 repository list
+# http://downloads.mariadb.org/mariadb/repositories/
+deb [arch=amd64] http://ftp.hosteurope.de/mirror/mariadb.org/repo/10.3/ubuntu bionic main
+deb-src http://ftp.hosteurope.de/mirror/mariadb.org/repo/10.3/ubuntu bionic main
+```
+
+
+then install mariaDB
+
+```bash
+apt-get update
+apt-get install mariadb-server
+```
+
+config the new installation
+
+```bash
+mysql_secure_installation
+```
