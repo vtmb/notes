@@ -56,6 +56,8 @@ open_basedir = /var/www/:/tmp/:/var/nextcloud_data
 
 # User anpassen in NGINX
 
+statt nginx www-data
+
 ```bash
 /etc/nginx/nginx.conf
 
