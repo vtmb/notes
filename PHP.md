@@ -53,3 +53,9 @@ cgi.fix_pathinfo = 0
 opcache.revalidate_freq = 1
 open_basedir = /var/www/:/tmp/:/var/nextcloud_data
 ```
+
+# User anpassen in NGINX
+
+```bash
+/etc/nginx/nginx.conf
+
