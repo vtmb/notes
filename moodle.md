@@ -1,6 +1,6 @@
 # Moodle installieren
 
-bash```
+```bash
 wget https://download.moodle.org/download.php/direct/stable33/moodle-latest-33.tgz
 tar -zxvf moodle-latest-33.tgz
 mv moodle /var/www/moodle
@@ -21,7 +21,8 @@ FLUSH PRIVILEGES;
 EXIT;
 ```
 
-config für nginx
+#config für nginx
+
 ```bash
 location ^~ /moodle/ {
 	client_max_body_size 10G;
@@ -61,3 +62,4 @@ server {
 	fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
 	}
 }
+```
