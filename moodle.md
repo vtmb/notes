@@ -42,7 +42,8 @@ location ^~ /moodle/ {
 
 # serverblock
 
-bash```
+```bash
+
 server {
 	listen   82;
 	server_name 127.0.0.1;
