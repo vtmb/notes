@@ -1,3 +1,10 @@
+## Dienste, die vor dem Testen neu gestartet werden sollten
+
+```bash
+systemctl php-fpm restart
+systemctl nginx restart
+```
+
 # Moodle installieren
 
 ```bash
