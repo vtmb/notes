@@ -79,3 +79,25 @@ server {
 	}
 }
 ```
+
+Dann müssen noch wegen der SSL-Terminierung ein paar Änderungen gemacht werden, sonst würde die URL nicht stimmen (es würde die Portnummer dabei stehen)
+
+```bash
+vim /var/www/moodle/config.php
+```
+und dort dann 
+
+```bash
+$CFG->wwwroot = 'https://meinhost.tld/moodle';
+$CFG->sslproxy=1;
+```
+
+Ab dann kann die Installation beginnen.
+
+Es wird wahrscheinlich ein Fehler kommen, dass die Installation mit einer anderen IP-Adresse angestoßen wurde.
+
+Da kann man etwas mogeln:
+
+``sql
+update mdl_user set lastip='127.0.0.1' where username = 'admin';
+```
