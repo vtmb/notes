@@ -1,7 +1,7 @@
 ## Dienste, die vor dem Testen neu gestartet werden sollten
 
 ```bash
-systemctl php-fpm restart
+systemctl php7.2-fpm restart
 systemctl nginx restart
 ```
 
