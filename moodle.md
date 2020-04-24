@@ -5,6 +5,14 @@ systemctl php7.2-fpm restart
 systemctl nginx restart
 ```
 
+# Logs in Echtzeit prüfen
+
+```bash
+tail /var/log/nginx/error.log -f
+```
+
+der Schalter -f hängt immer die neu dazugekommen Zeilen an
+
 # Moodle installieren
 
 ```bash
