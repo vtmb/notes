@@ -58,7 +58,6 @@ location ^~ /moodle/ {
 # serverblock
 
 ```bash
-
 server {
 	listen   82;
 	server_name 127.0.0.1;
@@ -98,6 +97,6 @@ Es wird wahrscheinlich ein Fehler kommen, dass die Installation mit einer andere
 
 Da kann man etwas mogeln:
 
-``sql
+```sql
 update mdl_user set lastip='127.0.0.1' where username = 'admin';
 ```
