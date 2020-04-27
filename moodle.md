@@ -100,3 +100,10 @@ Da kann man etwas mogeln:
 ```sql
 update mdl_user set lastip='127.0.0.1' where username = 'admin';
 ```
+
+
+## Liste der shortnames aller Kurse generieren
+
+```sql
+select shortname into outfile 'courseshortnames' fields terminated by ',' optionally enclosed by '"' lines terminated by '\n' from mdl_course
+```
