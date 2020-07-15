@@ -1,4 +1,4 @@
-# Erinnerung an mich selbst: Man kann für eine Domain ein gepacktes Zertifikat erzeugen, in dem alle Subdomains abgedeckt werden, etwa so:
+## Erinnerung an mich selbst: Man kann für eine Domain ein gepacktes Zertifikat erzeugen, in dem alle Subdomains abgedeckt werden, etwa so:
 
 acme.sh --issue -d meinedomain.de -d subdomain.meinedomain.de --keylength 4096 -w /var/www/letsencrypt --key-file /etc/letsencrypt/meinedomain.de/key.pem --ca-file /etc/letsencrypt/meinedomain.de/ca.pem --cert-file /etc/letsencrypt/meinedomain.de/cert.pem --fullchain-file /etc/letsencrypt/meinedomain.de/fullchain.pem --reloadcmd "sudo /bin/systemctl reload nginx.service"
 
