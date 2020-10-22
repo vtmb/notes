@@ -1,3 +1,8 @@
+# Listing all Computers in Active Directory
+
+ldapsearch -H ldaps://hostname.company.de -x -W -D "user@company" -b "dc=company,dc=de" "(&(&(&(samAccountType=805306369)(!(primaryGroupId=516)))(objectCategory=computer)))" | grep dNSHostName > allhostnames.txt
+
+
 # Listing all users in Active Directory
 
 ldapsearch -H ldaps://meinserver.meinefirma.de -x -W -D "benutzername@meinefirma.de" -b "cn=users,dc=meinefirma,dc=de"
