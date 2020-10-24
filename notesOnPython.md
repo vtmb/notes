@@ -37,19 +37,19 @@ Außerdem zeigt dir dein Terminal den Namen der Umgebung in runden Klammern an.
 ## Abhängigkeiten installieren
 
 ```bash
-python -m pip install PaketName
+pip install PaketName
 ```
 
 ## Abhängigkeiten "festhalten"
 
 ```bash
-python -m pip freeze > requirements.txt
+pip freeze > requirements.txt
 ```
 
 ## festgehaltene Abhängigkeiten installieren
 
 ```bash
-python -m pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 
