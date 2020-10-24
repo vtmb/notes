@@ -26,6 +26,8 @@ deactivate
 type python
 ```
 
+Dein Terminal zeigt den Namen der Umgebung in runen Klammern an.
+
 # Verwalten von Abhängigkeiten
 
 *Voraussetzung*: Man hat die Pythonumgebung betreten
@@ -36,4 +38,17 @@ type python
 ```bash
 python -m pip install PaketName
 ```
+
+## Abhängigkeiten "festhalten"
+
+```bash
+python -m pip freeze > requirements.txt
+```
+
+## festgehaltene Abhängigkeiten installieren
+
+```bash
+python -m pip install -r requirements.txt
+```
+
 
