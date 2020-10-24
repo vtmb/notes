@@ -26,7 +26,7 @@ deactivate
 type python
 ```
 
-Dein Terminal zeigt den Namen der Umgebung in runen Klammern an.
+Außerdem zeigt dir dein Terminal den Namen der Umgebung in runden Klammern an.
 
 # Verwalten von Abhängigkeiten
 
