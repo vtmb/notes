@@ -31,6 +31,7 @@ Außerdem zeigt dir dein Terminal den Namen der Umgebung in runden Klammern an.
 # Verwalten von Abhängigkeiten
 
 *Voraussetzung*: Man hat die Pythonumgebung betreten
+
 *Muss bedacht werden*: pip hat keine echte Abhängigkeitsauflösung, wenn man eine `requirements.txt` anlegt!
 
 ## Abhängigkeiten installieren
