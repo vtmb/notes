@@ -19,6 +19,8 @@ load data local infile 'file.csv' into table tablename
   lines terminated by '\n' (column, column);
 ```
 
+When inserting in Tables with auto_increment Values, ignore this field. The database will generate it automatically.
+
 # using varchar with utf8mb4
 
 mind the limit! varchar(191) is correct. varchar(255) will not work
