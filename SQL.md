@@ -93,7 +93,8 @@ SELECT customer_id, firstname, surname INTO OUTFILE '/exportdata/customers.txt'
   FROM customers order by firstname;
 ```
 
-exports are by default written to /var/lib/mysql/$NAMEOFDATABASE
+exports are by default written to /var/lib/mysql/$NAMEOFDATABASE in Linux
+exports are by default written to /usr/local/var/mysql/$NAMEOFDATABASE in macOS
 
 
 # creating user and granting access
