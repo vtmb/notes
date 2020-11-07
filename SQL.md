@@ -1,3 +1,16 @@
+# fallstrick vermeiden!!
+
+öffne das *.sql oder *.csv mit vim -b
+
+```bash
+vim -b filename
+```
+sind dort mysteriöse ^M dann sind das keine normalen ^M, die man so eintippen kann!
+man erzeugt sie mit ctrl+v ctrl+m.
+Also erst ctrl gedrückt halten, v drücken, dann m drücken. Es ist kein String! Es ist ein "nicht druckbares Steuerzeichen"!
+
+danach kann man also mit `sed -i.bak 's/^M//g' filename` die Datei kompatibel machen (Ich habe Mac/Linux)
+
 # create database 
 
 ```SQL
