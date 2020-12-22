@@ -7,12 +7,12 @@ ssh-copy-id user@hostname.example.com
 
 # Auf einen internen Rechner zugreifen
 
-´´´bash
+```bash
 ssh -J name@publicserver name@internalcomputer
-´´´
+```
 
 funktioniert auch mit sftp
 
-´´´bash
+```bash
 sftp -J name@publicserver name@internalcomputer
-´´´
+```
