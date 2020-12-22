@@ -16,3 +16,11 @@ funktioniert auch mit sftp
 ```bash
 sftp -J name@publicserver name@internalcomputer
 ```
+
+# Auf einen internen Service zugreifen
+
+oder: public server als jumphost zum internen service:
+
+```bash
+ssh -L portAußen:internerDienst:portInnen name@publicserver
+```
