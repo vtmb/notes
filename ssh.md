@@ -22,5 +22,5 @@ sftp -J name@publicserver name@internalcomputer
 oder: public server als jumphost zum internen service:
 
 ```bash
-ssh -L portAußen:internerDienst:portInnen name@publicserver
+ssh -L PortAußen:localhost:PortInnen -J name@publicserver internalServer
 ```
