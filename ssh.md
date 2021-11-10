@@ -24,3 +24,10 @@ oder: public server als jumphost zum internen service:
 ```bash
 ssh -L PortAußen:localhost:PortInnen -J name@publicserver internalServer
 ```
+
+# Ein grafisches Programm von remote starten
+
+```bash
+export DISPLAY=:0
+xeyes
+```
