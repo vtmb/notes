@@ -32,4 +32,9 @@ ldapsearch -H ldaps://meinserver.meinefirma.de -x -W -D "benutzername@meinefirma
 ```bash
 Get-ADComputer -Property * | Get-Member -MemberType Properties
 ```
+# Example for exporting all users as ldif file
 
+```bash
+ldifde -f testerei -p subtree -r "(&(objectcategory=person)(objectclass=user)(givenname=*))" -l "cn,givenname,ob
+jectclass,samaccountname"
+```
