@@ -6,8 +6,4 @@ in bashrc
 alias open=xdg-open
 ```
 
-in .profile
-```bash
-mouseid=$(xinput --list | sed -E '/mouse/I!d;s/.*?mouse.*?id=([0-9]+).*/\1/i;q')
-xinput --set-prop $mouseid 'libinput Natural Scrolling Enabled' 1
-```
+gsettings set org.gnome.desktop.input-sources xkb-options "['lv3:lalt_switch','lv3:ralt-alt']"
