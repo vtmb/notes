@@ -11,6 +11,9 @@ db_name="moodle"
 # Fügen Sie hier weitere Einstellungen für rsync hinzu, falls gewünscht
 rsync_options="-av --delete --bwlimit=5m"
 
+# Startzeit ermitteln
+start_time=$(date +%s)
+
 # Aktivieren des Wartungsmodus in Moodle
 php /var/www/html/moodle/admin/cli/maintenance.php --enable
 
@@ -24,3 +27,11 @@ nice -n 19 ionice -c3 rsync $rsync_options /var/www/html/moodle $backup_dir
 # Deaktivieren des Wartungsmodus in Moodle
 php /var/www/html/moodle/admin/cli/maintenance.php --disable
 
+# Endzeit ermitteln
+end_time=$(date +%s)
+
+# Laufzeit berechnen
+duration=$((end_time - start_time))
+
+# Laufzeit ausgeben
+echo "Das Backup-Skript wurde in $duration Sekunden ausgeführt."
