@@ -11,9 +11,16 @@ db_name="moodle"
 # Fügen Sie hier weitere Einstellungen für rsync hinzu, falls gewünscht
 rsync_options="-av --delete --bwlimit=5m"
 
+# Aktivieren des Wartungsmodus in Moodle
+php /var/www/html/moodle/admin/cli/maintenance.php --enable
+
 # Führen Sie die Datenbanksicherung mit Lock-Tables durch
 mysqldump --lock-tables -u $db_user -p$db_password $db_name > $backup_dir/moodle_db_backup.sql
 
 # Führen Sie die Sicherung mit rsync in niedriger Priorität und niedriger I/O-Priorität aus
 nice -n 19 ionice -c3 rsync $rsync_options /var/www/moodledata $backup_dir
 nice -n 19 ionice -c3 rsync $rsync_options /var/www/html/moodle $backup_dir
+
+# Deaktivieren des Wartungsmodus in Moodle
+php /var/www/html/moodle/admin/cli/maintenance.php --disable
+
