@@ -13,7 +13,7 @@ db_password="DEIN DATENBANK PASSWORT"
 db_name="DEI DATENBANK NAME"
 
 # Fügen Sie hier weitere Einstellungen für rsync hinzu, falls gewünscht
-rsync_options="-av --delete --bwlimit=5m"
+rsync_options="-av --delete --bwlimit=5m --progress"
 
 # Startzeit ermitteln
 start_time=$(date +%s)
