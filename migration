@@ -1,0 +1,9 @@
+# migrating to other server
+
+create directory in new server
+
+then from source server:
+
+rsync -av --delete --bwlimit=5m --progress /path/to/directory/ user@destination:/path/to/directory
+
+no trailing slash!!
