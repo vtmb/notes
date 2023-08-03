@@ -1,0 +1,5 @@
+# login as other user in debian without sudo
+
+su www-data -s /sbin/bash
+
+this logs you in as www-data in bash shell
