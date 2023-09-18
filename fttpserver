@@ -1,0 +1,20 @@
+bash#  apt install atftpd 
+Install atftpd from repository on RedHat/Fedora/Centos:
+
+bash#  yum install atftpd 
+Create directory where you want to put the image file:
+
+bash#  mkdir /srv/tftp 
+Put an image file into your directory - actual name will vary:
+
+bash#  cp ~/tp_recovery.bin /srv/tftp 
+Change the ownership of the folder and the file in it:
+
+bash#  chown nobody:nogroup -R /srv/tftp 
+Run TFTP server (run as daemon, do not fork, log events to stdout):
+
+bash#  atftpd --daemon --no-fork --logfile - /srv/tftp 
+Check if your TFTP server is listening:
+
+bash#  netstat -lunp|grep 69 
+If not set, you should try running TFTP server as superuser.
