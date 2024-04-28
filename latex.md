@@ -1,6 +1,6 @@
 # Installing LaTeX-Packages
 
-bash```
+```bash
 tlgmr init-usertree
 tlmgr install <package-name>
 ```
